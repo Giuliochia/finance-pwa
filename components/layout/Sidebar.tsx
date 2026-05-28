@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { LayoutDashboard, ArrowLeftRight, RefreshCw, BarChart3, LogOut } from 'lucide-react'
+import { LayoutDashboard, ArrowLeftRight, RefreshCw, BarChart3, Tag, LogOut } from 'lucide-react'
 import { cn } from '@/lib/utils'
 import { createClient } from '@/lib/supabase/client'
 import { useRouter } from 'next/navigation'
@@ -11,6 +11,7 @@ const navItems = [
   { href: '/transactions', label: 'Transazioni',  icon: ArrowLeftRight },
   { href: '/recurring',   label: 'Ricorrenti',   icon: RefreshCw },
   { href: '/analytics',   label: 'Analytics',    icon: BarChart3 },
+  { href: '/categories',  label: 'Categorie',    icon: Tag },
 ]
 
 export function Sidebar() {

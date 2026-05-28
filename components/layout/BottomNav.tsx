@@ -1,7 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { LayoutDashboard, ArrowLeftRight, RefreshCw, BarChart3 } from 'lucide-react'
+import { LayoutDashboard, ArrowLeftRight, RefreshCw, BarChart3, Tag } from 'lucide-react'
 import { cn } from '@/lib/utils'
 
 const navItems = [
@@ -9,6 +9,7 @@ const navItems = [
   { href: '/transactions', label: 'Movimenti',   icon: ArrowLeftRight },
   { href: '/recurring',   label: 'Ricorrenti',  icon: RefreshCw },
   { href: '/analytics',   label: 'Analytics',   icon: BarChart3 },
+  { href: '/categories',  label: 'Categorie',   icon: Tag },
 ]
 
 export function BottomNav() {
