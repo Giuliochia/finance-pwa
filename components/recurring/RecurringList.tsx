@@ -95,7 +95,7 @@ export function RecurringList({ recurring, categories, currency }: RecurringList
                 <div className="flex items-center gap-2">
                   <p className="text-sm font-medium text-zinc-200 truncate">{item.name}</p>
                   {isDueAudit(item) && (
-                    <AlertTriangle size={12} className="text-amber-400 shrink-0" title="Audit richiesto" />
+                    <AlertTriangle size={12} className="text-amber-400 shrink-0" />
                   )}
                 </div>
                 <div className="flex items-center gap-2 mt-0.5">
