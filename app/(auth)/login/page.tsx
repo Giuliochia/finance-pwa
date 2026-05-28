@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/Button'
 import { Input } from '@/components/ui/Input'
 import { useRouter } from 'next/navigation'
 import Link from 'next/link'
+import Image from 'next/image'
 
 export default function LoginPage() {
   const [email, setEmail] = useState('')
@@ -28,12 +29,14 @@ export default function LoginPage() {
     <div className="min-h-screen bg-zinc-950 flex items-center justify-center p-4">
       <div className="w-full max-w-sm space-y-8">
         {/* Logo */}
-        <div className="flex flex-col items-center gap-3">
-          <div className="w-12 h-12 rounded-2xl bg-emerald-500 flex items-center justify-center glow-emerald">
-            <span className="text-white font-bold text-xl">F</span>
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-24 h-24 rounded-3xl overflow-hidden glow-emerald">
+            <Image src="/icons/icon-512.png" alt="Finance logo" width={96} height={96} className="w-full h-full object-cover" priority />
           </div>
-          <h1 className="text-2xl font-bold text-zinc-100">Finance PWA</h1>
-          <p className="text-sm text-zinc-500">Il tuo bilancio personale</p>
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-zinc-100">Finance PWA</h1>
+            <p className="text-sm text-zinc-500 mt-1">Il tuo bilancio personale</p>
+          </div>
         </div>
 
         {/* Form */}
